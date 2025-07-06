@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>RoyalBet | বাংলাদেশ গেমিং</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="img/royalbet-logo.png" alt="RoyalBet" class="logo">
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </header>
+  <aside id="sidebar">
+    <nav>
+      <ul>
+        <li><a href="index.html">হোম</a></li>
+        <li><a href="login.html">লগইন</a></li>
+        <li><a href="register.html">নিবন্ধন</a></li>
+        <li><a href="deposit.html">ডিপোজিট</a></li>
+        <li><a href="withdraw.html">উইথড্র</a></li>
+        <li><a href="live-support.html">লাইভ সাপোর্ট</a></li>
+        <li><a href="updates.html">আপডেট</a></li>
+        <li><a href="upcoming.html">আপকামিং গেমস</a></li>
+        <li><a href="winners.html">উইনার্স</a></li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="#"><img src="img/telegram.png" alt="Telegram"></a>
+      <a href="#"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+      <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+    </div>
+  </aside>
+  <main>
+    <audio id="bgm" src="music/home.mp3" loop autoplay></audio>
+    <button onclick="toggleMusic()" id="musicBtn">🔊</button>
+    <section id="offerSection"></section>
+    <section class="games">
+      <h2>আমাদের গেমস</h2>
+      <div id="game-list"></div>
+    </section>
+    <section class="results">
+      <h3>লাইভ গেম রেজাল্ট</h3>
+      <div id="liveResults">লাইভ রেজাল্ট এখানে শো করবে...</div>
+      <div id="luckyWinnerBar"></div>
+    </section>
+  </main>
+  <footer>
+    © ২০২৫ RoyalBet. All rights reserved.
+  </footer>
+  <div id="gameModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeGameModal()">&times;</span>
+      <div id="gameFrame"></div>
+    </div>
+  </div>
+</body>
+</html>

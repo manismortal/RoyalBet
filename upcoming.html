@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>আপকামিং গেমস | RoyalBet</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <audio id="bgm" src="music/upcoming.mp3" loop autoplay></audio>
+  <div class="section-box">
+    <h2>আপকামিং গেমস</h2>
+    <div id="upcomingList"></div>
+  </div>
+  <button onclick="toggleMusic()" id="musicBtn">🔊</button>
+  <script src="js/main.js"></script>
+  <script>
+    fetch('config/upcoming.json')
+      .then(r=>r.json())
+      .then(upc=>{
+        document.getElementById('upcomingList').innerHTML =
+          upc.map(u=>`<p><b>${u.name}</b> (রিলিজ: ${u.release})</p>`).join('');
+      });
+  </script>
+</body>
+</html>

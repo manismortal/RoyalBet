@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>উইনার্স | RoyalBet</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <audio id="bgm" src="music/winners.mp3" loop autoplay></audio>
+  <div class="section-box">
+    <h2>সাম্প্রতিক উইনার্স</h2>
+    <div id="winnerList"></div>
+  </div>
+  <button onclick="toggleMusic()" id="musicBtn">🔊</button>
+  <script src="js/main.js"></script>
+  <script>
+    fetch('config/winners.json')
+      .then(r=>r.json())
+      .then(wins=>{
+        document.getElementById('winnerList').innerHTML =
+          wins.map(w=>`<p><b>${w.name}</b> - ${w.amount}৳</p>`).join('');
+      });
+  </script>
+</body>
+</html>
