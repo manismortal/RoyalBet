@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RoyalBet Admin Panel</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .admin-box { max-width:540px; margin:40px auto; background:#fff; padding:36px; border-radius:12px;}
+    label { font-weight:bold; }
+    input, textarea, select { width:100%; margin-bottom:16px;}
+  </style>
+</head>
+<body>
+  <div class="admin-box">
+    <h2>Admin Panel (Demo UI)</h2>
+    <p>এখানে user, games, offer, winner, deposit, withdraw ইত্যাদি future API/backend দিয়ে control হবে।</p>
+    <form>
+      <label>User Search</label>
+      <input type="text" placeholder="Username/ID">
+      <label>Add Money</label>
+      <input type="number" placeholder="Amount">
+      <label>Bonus</label>
+      <input type="number" placeholder="Bonus">
+      <button type="submit">Update</button>
+    </form>
+    <hr>
+    <label>Offer/Notice Update</label>
+    <textarea placeholder="offers.json content"></textarea>
+    <button>Save Offers</button>
+    <hr>
+    <label>Winner Update</label>
+    <textarea placeholder="winners.json content"></textarea>
+    <button>Save Winners</button>
+  </div>
+</body>
+</html>

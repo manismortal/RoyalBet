@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RoyalBet Local Config Panel</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .panel-box { max-width:500px; margin:40px auto; background:#fff; padding:36px; border-radius:12px;}
+    textarea { width:100%; min-height:120px;}
+  </style>
+</head>
+<body>
+  <div class="panel-box">
+    <h2>Local Config Editor (Demo)</h2>
+    <p>এখান থেকে config/games.json, offers.json, winners.json, upcoming.json এডিট করতে পারেন। (Demo only, real admin panel server-এ থাকবে!)</p>
+    <label>games.json</label>
+    <textarea id="games"></textarea>
+    <button onclick="save('games')">Save</button>
+    <label>offers.json</label>
+    <textarea id="offers"></textarea>
+    <button onclick="save('offers')">Save</button>
+    <label>winners.json</label>
+    <textarea id="winners"></textarea>
+    <button onclick="save('winners')">Save</button>
+    <label>upcoming.json</label>
+    <textarea id="upcoming"></textarea>
+    <button onclick="save('upcoming')">Save</button>
+  </div>
+  <script>
+    // Demo only: এই panel js দিয়ে localStorage-এ রাখে, বাস্তবে server API দিয়ে হবে
+    function loadData(file) {
+      let data = localStorage.getItem(file) || '';
+      document.getElementById(file).value = data;
+    }
+    function save(file) {
+      localStorage.setItem(file, document.getElementById(file).value);
+      alert('Saved! (Demo only)');
+    }
+    ['games','offers','winners','upcoming'].forEach(loadData);
+  </script>
+</body>
+</html>

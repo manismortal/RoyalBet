@@ -1,0 +1,12 @@
+[
+  {"id":1,"name":"গেম ১","img":"img/game1.png"},
+  {"id":2,"name":"গেম ২","img":"img/game2.png"},
+  {"id":3,"name":"গেম ৩","img":"img/game3.png"},
+  {"id":4,"name":"গেম ৪","img":"img/game4.png"},
+  {"id":5,"name":"গেম ৫","img":"img/game5.png"},
+  {"id":6,"name":"গেম ৬","img":"img/game6.png"},
+  {"id":7,"name":"গেম ৭","img":"img/game7.png"},
+  {"id":8,"name":"গেম ৮","img":"img/game8.png"},
+  {"id":9,"name":"গেম ৯","img":"img/game9.png"},
+  {"id":10,"name":"গেম ১০","img":"img/game10.png"}
+]

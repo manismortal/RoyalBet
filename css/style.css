@@ -1,0 +1,41 @@
+body { font-family: "SolaimanLipi", Arial, sans-serif; margin:0; background: #f6f6fa;}
+header { display:flex; align-items:center; justify-content:space-between; background:#2e0249; color:#fff; padding:18px 24px; position:sticky; top:0; z-index:12;}
+.logo { height: 40px;}
+.menu-btn { font-size:2em; background:none; border:none; color:#fff; cursor:pointer; }
+#sidebar { position:fixed; left:-220px; top:0; bottom:0; width:220px; background:#431b8f; color:#fff; transition:left .3s; z-index:50; padding-top:65px;}
+#sidebar.open { left:0; }
+#sidebar nav ul { list-style:none; padding:0;}
+#sidebar nav ul li { margin:24px 0;}
+#sidebar nav ul li a { color:#fff; text-decoration:none; font-size:1.1em;}
+.social-links { display:flex; gap:12px; margin:18px; }
+.social-links img { width:28px; height:28px; border-radius:6px; box-shadow:0 1px 4px #2222; }
+main { margin-left:0; padding:30px 12px;}
+.games h2 { text-align:center; margin-bottom:20px;}
+#game-list { display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+.game-card { background:#fff; border-radius:12px; box-shadow:0 4px 24px #e0e0f5; width:170px; text-align:center; cursor:pointer; transition:box-shadow .2s; animation: cardEnter .6s;}
+@keyframes cardEnter {from{transform:scale(0.85);opacity:0;}to{transform:scale(1);opacity:1;}}
+.game-card:hover { box-shadow:0 12px 30px #c3bff5;}
+.game-card img { width:100%; height:100px; object-fit:cover; border-radius:12px 12px 0 0;}
+.game-card span { display:block; padding:12px 0; color:#222;}
+.results { margin-top:40px; text-align:center;}
+footer { background:#2e0249; color:#fff; text-align:center; padding:20px 0; margin-top:40px;}
+.login-box, .section-box { max-width:340px; margin:60px auto; padding:32px; background:#fff; border-radius:14px; box-shadow:0 6px 32px #e0e0f5;}
+.login-box h2, .section-box h2 { text-align:center; }
+.login-box label { display:block; margin:16px 0 5px;}
+.login-box input { width:100%; padding:10px; border-radius:6px; border:1px solid #bbb; }
+.login-box button { width:100%; background:#431b8f; color:#fff; padding:12px 0; border:none; border-radius:8px; margin-top:18px; font-size:1em;}
+.login-box p { text-align:right; margin-top:14px;}
+#offerSection { background:#f3eaff; padding:12px; margin:12px 0; border-radius:10px; box-shadow:0 2px 6px #f2e0ff55;}
+#luckyWinnerBar { margin:18px 0 0; color:#008e35; font-weight:bold;}
+.modal { position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:99; display:flex; align-items:center; justify-content:center;}
+.modal-content { background:#fff; padding:20px; border-radius:10px; position:relative;}
+.close { position:absolute; right:14px; top:8px; font-size:2em; color:#222; cursor:pointer;}
+#musicBtn { position:fixed; bottom:24px; right:24px; background:#fff4; border:none; border-radius:50%; width:44px; height:44px; font-size:1.3em; z-index:100;}
+@media (min-width:900px) {
+  main { margin-left:220px; }
+  #sidebar { left:0;}
+  .menu-btn { display:none;}
+}
+@media (max-width:600px) {
+  .game-card { width: 95vw; max-width:180px;}
+}
